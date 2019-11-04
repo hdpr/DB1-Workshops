@@ -182,4 +182,4 @@ In 3 NV bekomen we uiteindelijk:
 - R<sub>34</sub>(**a<sub>4</sub></ins>**, a<sub>5</sub>)
 
 ## Relationeel model 
-Benoemen van verzamelingen en integriteitsregels bepalen, weet dat de optionaliteit/verplichtheid niet altijd evident is en vaak wordt bepaald door de opdrachtgever in een apart document. Echter kan je er altijd zeker van zijn dat een vreemde sleutels steeds verplicht is, als hij deeluitmaakt van de primaire sleutel.
+Benoemen van verzamelingen en integriteitsregels bepalen, weet dat de optionaliteit/verplichtheid niet altijd evident is en vaak wordt bepaald door de opdrachtgever in een apart document. Echter kan je er altijd zeker van zijn dat een vreemde sleutel steeds verplicht is, als hij deel uitmaakt van de primaire sleutel.
