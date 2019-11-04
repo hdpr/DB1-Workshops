@@ -23,7 +23,7 @@ Stel :  `A` → `B`
 ### Functionele afhankelijkheden
 - Correct:
     - `rijksregisterNr → naam, beroep`
-        > Het `rijksregisterNr` bepaald de `naam` en `beroep`
+        > Het `rijksregisterNr` bepaalt de `naam` en `beroep`
         - Indien we het `rijksregisterNr` weten, kunnen we eenduidig zeggen dat het gaat over een bepaald persoon met een bepaald `beroep`. Zo kunnen we zeggen dat **87022800130, Louise de leerkracht** is.
     - `(rijksregisterNr, naam) → beroep`
         > De combinatie van **rijksregisterNr en naam** bepalen het beroep
@@ -31,19 +31,19 @@ Stel :  `A` → `B`
 
 - Foutief:
     - `beroep → rijksregisterNr, naam`
-        > Het beroep bepaald het rijksregisterNr en de naam
+        > Het beroep bepaalt het rijksregisterNr en de naam
         - **Leerkracht** komt twee keer voor in de lijst, we kunnen dus niet zeggen dat indien we het `beroep` weten, we ook de `naam` of `rijksregisterNr` van de **leerkracht** in kwestie weten.
     - `naam → rijksregisterNr, beroep`
         > De naam bepaald het rijksregisterNr en beroep
         - **Emma** komt twee keer voor in de lijst, we kunnen dus niet zeggen dat indien we de `naam` weten, we ook het `beroep` of `rijksregisterNr` van **Emma** weten. 
     - `(beroep, naam) → rijksregisterNr`
         > De combinatie van **beroep en naam** bepalen het rijksregisterNr
-        - In dit geval, klopt de stelling maar denk even na... zijn er niet meer dan 1 leerkrachten die Emma noemen? In dit voorbeeld is dit vrij duidelijk te verduidelijken, indien dit zich voordoet in de praktijk, ga je best even langs bij de opdrachtgever.
+        - In dit geval, klopt de stelling maar denk even na ... zijn er niet meer dan 1 leerkrachten die Emma noemen? In dit voorbeeld is dit vrij duidelijk te verduidelijken, indien dit zich voordoet in de praktijk, ga je best even langs bij de opdrachtgever.
 
-## Partïele afhankelijkheid
+## Partiële afhankelijkheid
 Stel :  `A` → `B`
 
-`B` is **partieel afhankelijk** van `A` als `A` **samengesteld is (bestaat minstens uit 2 attributen)** en als er met 1 waarde van `A` ten hoogste ́1 waarde van `B` overeenkomt, maar niet elke attribuut van `A` is nodig om `B` te bepalen. Er kan dus enkel partïele afhankelijkheid voordoen indien:
+`B` is **partieel afhankelijk** van `A` als `A` **samengesteld is (bestaat minstens uit 2 attributen)** en als er met 1 waarde van `A` ten hoogste ́1 waarde van `B` overeenkomt, maar niet elke attribuut van `A` is nodig om `B` te bepalen. Er kan dus enkel partiële afhankelijkheid voordoen indien:
 - `A` bestaat uit minimum 2 attributen, anders is `B` **nooit** partieel afhankelijk.
 - `B` uniek gevonden kan worden door het kennen van enkele van de attributen van `A`, maar niet alle attributen van `A` zijn hiervoor nodig.
 
@@ -57,7 +57,7 @@ Stel :  `A` → `B`
 
 ### Functionele afhankelijkheden
 - `rijksregisterNr → naam, beroep`
-    - Partiele afhankelijkheid kan hier **nooit** voorkomen, de determinant bestaat maar uit 1 attribuut namelijk `rijksregisterNr`.
+    - Partiêle afhankelijkheid kan hier **nooit** voorkomen, de determinant bestaat maar uit 1 attribuut namelijk `rijksregisterNr`.
 - `(rijksregisterNr, naam) → beroep`
     - Met `(rijksregisterNr, naam)` kan er steeds 1 bepaald beroep aangeduid worden. Alleen is het attribuuttype `naam` in de determinant overbodig. Beroep is namelijk enkel maar afhankelijk van het attribuuttype `rijksregisterNr`. Met enkel het attribuut `rijksregisterNr` kan nog steeds een **uniek** `beroep` bepaald worden. Het extra attribuuttype `naam` is hiervoor niet nodig. Of anders gezegd: beroep is partieel afhankelijk
 van (nr, naam)
@@ -88,7 +88,7 @@ Er zijn nog enkele andere FA's, de voornaamste zijn hieronder opgelijst.
 ## Volledige functionele afhankelijkheid
 Stel : `A` → `B`
 
-`B` is **volledig afhankelijk** van `A` als geldt dat er met 1 waarde van `A`, hoogstens 1 waarde van `B` gevonden kan worden en er zijn **geen partiele- en geen transitieve afhankelijkheden** meer zijn. Met andere woorden, hebben we elk attribuut van `A` nodig om `B` te bepalen.
+`B` is **volledig afhankelijk** van `A` als geldt dat er met 1 waarde van `A`, hoogstens 1 waarde van `B` gevonden kan worden en er zijn **geen partiële- en geen transitieve afhankelijkheden** meer. Met andere woorden, hebben we elk attribuut van `A` nodig om `B` te bepalen.
 
 
 # Stappenplan voor normalisatie
